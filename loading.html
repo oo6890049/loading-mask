@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    #loading-over {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+        z-index: 100;
+        position: absolute;
+    }
+
+    #loading-s {
+        display: table;
+        width: 100px;
+        height: 100px;
+        background: rgba(0, 0, 0, .28);
+        top: 50%;
+        left: 50%;
+        margin: -50px 0 0 -50px;
+        border-radius: 10px;
+        position: absolute;
+        text-align: center;
+    }
+
+    .load-content {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: sans-serif;
+    }
+
+    #loading-s span:nth-child(1) {
+        background-clip: padding-box;
+        border-radius: 500px;
+        animation: scale 1s .1s infinite cubic-bezier(.6, -.28, .735, .045);
+    }
+
+    #loading-s span:nth-child(2) {
+        background-clip: padding-box;
+        border-radius: 500px;
+        animation: scale 1s .2s infinite cubic-bezier(.6, -.28, .735, .045);
+    }
+
+    #loading-s span:nth-child(3) {
+        background-clip: padding-box;
+        border-radius: 500px;
+        animation: scale 1s .3s infinite cubic-bezier(.6, -.28, .735, .045);
+    }
+
+    #loading-s span {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        background: #FFF
+    }
+
+    @keyframes scale {
+
+        0%, 100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        25% {
+            -webkit-transform: scale(.9, .9);
+            transform: scale(.9, .9);
+        }
+        50% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            margin: 0 3px;
+        }
+    }
+</style>
+<body>
+<div id="loading-over">
+    <div id="loading-s">
+        <div class="load-content">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
